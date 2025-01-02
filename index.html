@@ -8,11 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-black">
-    <header class="bg-orange-500 flex flex-wrap items-center p-4 m-2">
+    <header class="bg-orange-700 flex flex-wrap items-center p-4 m-2">
         <img src="assets/LameLion.jpg" alt="Logo" class="h-12 w-12 mr-4">
-        <nav class="flex-1">
-            <ul class="flex flex-wrap space-y-2 md:space-y-0 space-x-0 md:space-x-8 justify-center text-white text-lg font-medium px-4">
-                <li><a href="#" class="hover:underline block">No They Didn't</a></li>
+        <h1 class="text-white text-xl font-bold flex-1 text-center">No They Didn't</h1>
+        <nav class="flex items-center">
+            <button id="menu-toggle" class="text-white md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex flex-wrap space-y-2 md:space-y-0 space-x-0 md:space-x-8 justify-center text-white text-lg font-medium px-4">
                 <li><a href="https://www.canada.ca/en/health-canada/services/video/ask-experts-covid-19-vaccines.html" class="hover:underline block">Covid</a></li>
                 <li><a href="https://www.canada.ca/en/public-health/services/vaccination-children.html" class="hover:underline block">Parenting</a></li>
                 <li><a href="https://immunize.ca/" class="hover:underline block">Resources</a></li>
@@ -38,5 +43,14 @@
             <span class="block mt-2">~ George Orwell, 1984</span>
         </blockquote>
     </main>
+    <footer class="bg-orange-700 text-white text-center p-4 mt-6 m-2">        
+        <p class="text-gray-100 italic font-bold p-2"><a href="https://www.catholic.com/magazine/online-edition/no-truth-is-not-like-a-lion" class="hover:underline block">No, The Truth Is Not A Lion, That's Not Even A Real Quote.</a></p>
+        <p>&copy; 2025 - No They Didn't</p>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
